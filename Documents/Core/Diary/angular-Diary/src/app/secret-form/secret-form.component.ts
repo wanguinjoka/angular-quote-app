@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { Idea } from '../idea';
 
 @Component({
@@ -8,7 +8,7 @@ import { Idea } from '../idea';
 })
 export class SecretFormComponent implements OnInit {
   newIdea = new Idea(new Date(),"","");
-  @Output () addIdea=new EventEmitter<Idea>();
+  @Output() addIdea=new EventEmitter<Idea>();
 
   submitIdea(){
     this.addIdea.emit(this.newIdea);
