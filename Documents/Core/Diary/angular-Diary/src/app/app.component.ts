@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Idea } from './idea'
 
 @Component({
   selector: 'app-root',
