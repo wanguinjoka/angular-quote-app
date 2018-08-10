@@ -1,6 +1,10 @@
 #mainbody{
-  margin: auto 10px;
-  width: auto;
-  height: 2000px;
-  background-color: #FADA5E;
+  background-image: url('/assets/aerial-business-conceptual-697055.jpg');
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+#title{
+  text-align: center;
+  font-size:20px;
 }
