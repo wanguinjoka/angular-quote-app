@@ -1,8 +1,9 @@
 <h2>Quotes</h2>
 <ul>
 
-    <li *ngFor='let quote of quotes'>{{quote.message}}
-  </li>
-
-
+    <div *ngFor='let quote of quotes; let i= index'>
+      <li>{{quote.message}} </li>
+      <button (click)='toogleDetails(i)'>Show Author</button>
+    <app-quote-details *ngIf="quote.showDetails" [quote]='quote'></app-quote-details>
+</div>
 </ul>
