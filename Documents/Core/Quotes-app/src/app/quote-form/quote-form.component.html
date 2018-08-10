@@ -1,23 +1,32 @@
 <div class="container-fluid">
     <div class="row">
-        <form>
-            <div class="form-group">
+        <form (ngSubmit)='submitQuote()'#quoteForm='ngForm'>
+                  <div class="form-group">
 
-                <label for="message">Write Quote</label>
-                <textarea class="form-control" id="message" rows="4" required></textarea>
+                      <label for="message">Write Quote</label>
+                      <textarea class="form-control" id="message" rows="4" [(ngModel)]="newQuote.message" name="message" #message="ngModel" required></textarea>
+                        <div [hidden]="message.valid || message.pristine" class="alert alert-danger">
+                            <p> Quote is Required</p>
 
-            </div>
-            <div class="form-group">
+                  </div>
+                  <div class="form-group">
 
-                <label for="details">Your Name</label>
-                <input type="text" required class="form-control" id="details">
-                
-            </div>
-            <div class="form-group">
-                <label for="entryDate">Writern On</label>
-                <input type='date' id="entryDate" required>
+                      <label for="details">Your Name</label>
+                       <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
+                       <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                         <p> Name is Required</p>
 
+                  </div>
+                  <div class="form-group">
+                      <label for="entryDate">Writern On</label>
+                      <input type='date' id="entryDate" [(ngModel)]="newQuote.entryDate" name="entryDate" #entryDate="ngModel" required >
+                      <div [hidden]="entryDate.valid || entryDate.pristine" class="alert alert-danger">
+                      <p> Entry Date is Required</p>
+
+                  </div>
+                </div>
+                <button type="Submit" class="btn btn-success btn-lg">Pin Quote</button>
+              </div>
             </div>
         </form>
-    </div>
 </div>
