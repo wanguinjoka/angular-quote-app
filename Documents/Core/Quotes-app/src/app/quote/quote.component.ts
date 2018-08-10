@@ -12,6 +12,13 @@ export class QuoteComponent implements OnInit {
     new Quote(2,'the poor will always be amoung us','jesus christ',new Date (2018,7,5)),
   ]
 
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id=quoteLength+1;
+    quote.entryDate = new Date(quote.entryDate)
+    this.quotes.push(quote)
+  }
+
   toogleDetails(index){
     this.quotes[index].showDetails =!this.quotes[index].showDetails;
   }

@@ -1,0 +1,11 @@
+#message{
+  font-style: italic;
+  width: 500%;
+  height: 80px;
+  background: #FADA5E;
+  position: relative;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+
+}

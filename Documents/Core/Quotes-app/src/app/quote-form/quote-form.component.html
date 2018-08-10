@@ -12,8 +12,8 @@
                   <div class="form-group">
 
                       <label for="details">Your Name</label>
-                       <input type="text"  class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name="ngModel" required>
-                       <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                       <input type="text"  class="form-control" id="details" [(ngModel)]="newQuote.details" name="details" #details="ngModel" required>
+                       <div [hidden]="details.valid || details.pristine" class="alert alert-danger">
                          <p> Name is Required</p>
 
                   </div>
